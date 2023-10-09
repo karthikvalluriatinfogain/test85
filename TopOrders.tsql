@@ -1,0 +1,10 @@
+
+CREATE PROC Top_Customers @TopN INT
+AS 
+BEGIN
+SELECT TOP @TopN * FROM Billing.Orders 
+WHERE [customerId] <> NULL
+END
+GO
+
+EXECUTE Top_Customers 10;
