@@ -15,7 +15,7 @@ FROM   sys.dm_exec_requests r
                ON s.spid = r.session_id
        CROSS apply sys.Dm_exec_sql_text (r.sql_handle) t
 WHERE 1 = 1
-       AND r.session_id > 1
+       AND r.session_id > 12
        AND r.session_id <> @@spid
        AND s.[program_name] NOT LIKE '%SQL Server Profiler%'
 ORDER BY s.cpu DESC
