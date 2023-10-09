@@ -1,2 +1,2 @@
-SELECT TOP @TopN * FROM Billing.Orders 
-WHERE [customerId] <> NULL
+SELECT TOP 10 * FROM Billing.Orders 
+WHERE [customerId] = NULL
