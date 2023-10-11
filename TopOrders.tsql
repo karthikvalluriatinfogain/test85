@@ -1,2 +1,2 @@
 SELECT TOP 10 * FROM Billing.Orders 
-WHERE [customerId] = NULL
+WHERE [customerId] = 123
